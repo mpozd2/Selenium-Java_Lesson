@@ -34,7 +34,7 @@ public class InventoryPage {
             }
 
         }
-        System.out.println("Inventory page check DONE");
+        System.out.println("Product Add to cart DONE");
     }
 
 
