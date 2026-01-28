@@ -18,7 +18,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {//konstructor
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait =new WebDriverWait(driver, Duration.ofSeconds(2));//inicil
+        wait =new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     //PageFactory

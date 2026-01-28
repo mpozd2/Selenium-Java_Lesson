@@ -77,11 +77,12 @@ public class SauceDemoTest {
         //Assert.assertEquals("1", headerPage.getShoppingCarBadge().getText());
 
     }
+    /*
     //Closing Chrome windows after ending test with any result - pass /failed
     @AfterMethod
     public void tearDown() {
         driver.close();
         driver.quit();
 
-    }
+    }*/
 }
