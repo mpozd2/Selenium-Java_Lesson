@@ -35,7 +35,7 @@ public class LoginPage {
     public void authorize(String username, String password){
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
-        wait.until(ExpectedConditions.elementToBeClickable(loginButton));//explicitly wait  - явное одидание, element to be clickable
+                wait.until(ExpectedConditions.elementToBeClickable(loginButton));//explicitly wait  - явное одидание, element to be clickable
         //wait.until(ExpectedConditions.invisibilityOf(loginButton));//check if invisibility Button
         loginButton.click();
 
