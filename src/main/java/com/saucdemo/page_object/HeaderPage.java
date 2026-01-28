@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class HeaderPage {
+    private WebDriver driver;
 
     public HeaderPage(WebDriver driver) {
         PageFactory.initElements(driver, this);

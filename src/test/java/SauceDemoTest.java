@@ -17,8 +17,7 @@ public class SauceDemoTest {
     ChromeDriver driver;// обявляем драйвер который принадлежит класу Хромдрайвер
     LoginPage loginPage; //создаем и обьявляем страницу
     InventoryPage inventoryPage; // создаем и обьявляем страницу
-    //HeaderPage headerPage;
-
+    HeaderPage headerPage;
 
     Configurations configs;
     Configuration config;
@@ -30,7 +29,7 @@ public class SauceDemoTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); //wait 10 s
         loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver); // проиницилизировали страницу, передали туда Драйвер (создали обьект, чтоб использовать его в тестах
-        //headerPage = new HeaderPage(driver);
+        headerPage = new HeaderPage(driver);
 
         configs = new Configurations();
         config = configs.properties("config.properties");
@@ -46,7 +45,7 @@ public class SauceDemoTest {
         // driver = new ChromeDriver(); //иницилизируем драйвер в первом тесте
         //driver.get("https://www.saucedemo.com");//open page
 
-       /*
+       /* By.id/By.name - locators
         driver.findElement(By.id("user-name")).sendKeys("standard_user");//enter user name on field (By.id)
         driver.findElement(By.name("password")).sendKeys("secret_sauce");//enter password (By.name)
 
@@ -56,18 +55,16 @@ public class SauceDemoTest {
        */
         //Page Object
         //config.getString("username");
-
         //loginPage.authorize("standard_user","secret_sauce");
-        loginPage.authorize(config.getString("username"), config.getString("password"));
 
+        loginPage.authorize(config.getString("username"), config.getString("password"));
 
         //Expected Result  - compare
         // driver.getCurrentUrl();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
 
-
-        driver.close();
-        driver.quit();
+        // driver.close();
+        // driver.quit();
 
     }
 
@@ -80,9 +77,7 @@ public class SauceDemoTest {
         //Assert.assertEquals("1", headerPage.getShoppingCarBadge().getText());
 
     }
-}
 
- /*
     //Closing Chrome windows after ending test with any result - pass /failed
     @AfterMethod
     public void tearDown() {
@@ -91,5 +86,3 @@ public class SauceDemoTest {
 
     }
 }
-
-*/
