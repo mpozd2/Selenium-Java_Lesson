@@ -13,12 +13,13 @@ import java.time.Duration;
 public class LoginPage {
     WebDriverWait wait;
 
-    private WebDriver driver;
+    private WebDriver driver;//передаем в страницу WebDriver
 
-    public LoginPage(WebDriver driver) {//konstructor
+    public LoginPage(WebDriver driver) {//create Constructor
         this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait =new WebDriverWait(driver, Duration.ofSeconds(2));
+        PageFactory.initElements(driver, this);//вызываем pageFactory, в нем есть method initElements, подаем driver this для иницилизации всех елементов на странице
+
+        wait =new WebDriverWait(driver, Duration.ofSeconds(2)); //implicit waiting
     }
 
     //PageFactory
@@ -35,7 +36,7 @@ public class LoginPage {
     public void authorize(String username, String password){
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
-                wait.until(ExpectedConditions.elementToBeClickable(loginButton));//explicitly wait  - явное одидание, element to be clickable
+        //wait.until(ExpectedConditions.elementToBeClickable(loginButton));//explicit wait  - явное ожидание, element to be clickable
         //wait.until(ExpectedConditions.invisibilityOf(loginButton));//check if invisibility Button
         loginButton.click();
 

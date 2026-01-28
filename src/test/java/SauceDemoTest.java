@@ -48,18 +48,18 @@ public class SauceDemoTest {
     }
 
     @Test
-    public void SauceDemoLoginTest() {
+    public void sauceDemoLoginTest() {
         // driver = new ChromeDriver(); //иницилизируем драйвер в первом тесте
         //driver.get("https://www.saucedemo.com");//open page
 
-       /* By.id/By.name - locators
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");//enter user name on field (By.id)
-        driver.findElement(By.name("password")).sendKeys("secret_sauce");//enter password (By.name)
+        //By.id/By.name - locators
+        //driver.findElement(By.id("user-name")).sendKeys("standard_user");//enter user name on field (By.id)
+        //driver.findElement(By.name("password")).sendKeys("secret_sauce");//enter password (By.name)
 
         //XPath
         // Example : //tagname[@attribute='value']; Click on Login button using by XPath as locator
-        driver.findElement(By.xpath("//input[@data-test=\"login-button\"]")).click();
-       */
+        //driver.findElement(By.xpath("//input[@data-test=\"login-button\"]")).click();
+
         //Page Object
         //config.getString("username");
         //loginPage.authorize("standard_user","secret_sauce");
@@ -70,8 +70,10 @@ public class SauceDemoTest {
         // driver.getCurrentUrl();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
 
+        System.out.println("User logged in successfully");
+
         // driver.close();
-        // driver.quit();
+        // driver.quit()
 
    }
 
@@ -101,7 +103,7 @@ public class SauceDemoTest {
 
         //cartPage.getCartItems();
 
-       System.out.println("Checking Shopping cart DONE");
+       System.out.println("Checking Shopping cart - DONE");
 
 
     }

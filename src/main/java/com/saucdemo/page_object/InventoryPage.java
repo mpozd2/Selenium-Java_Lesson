@@ -25,6 +25,12 @@ public class InventoryPage {
     private final By inventoryButton = By.xpath((".//button[contains(@class,'btn_inventory')]"));
 
     public void selectItemByName(String itemName) {
+        //  for (WebElement webElement : inventoryItemList){
+        //  if (WebElement.getText().contains(itemName)) {// itemName ; "Backpack"
+        //    webElement.findElement(inventoryButton).click(); // inventoryButton: "By.xpath://
+        //  }
+
+
         //  inventoryItemList.size();// View List Items
         for (int i = 0; i < inventoryItemList.size(); i++) { //идем по тексту и делаем проверку
             if (inventoryItemList.get(i).getText().contains(itemName))//получает текст и проверяем check if Item description has text
@@ -34,7 +40,7 @@ public class InventoryPage {
             }
 
         }
-        System.out.println("Product Add to cart DONE");
+        System.out.println("Product Add to cart  - DONE");
     }
 
 
