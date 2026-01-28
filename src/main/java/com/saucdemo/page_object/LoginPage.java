@@ -18,7 +18,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {//konstructor
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait =new WebDriverWait(driver, Duration.ofSeconds(2));//inicil
+        wait =new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     //PageFactory
@@ -31,7 +31,7 @@ public class LoginPage {
     @FindBy(xpath = "//input[@data-test=\"login-button\"]")
     public WebElement loginButton;
 
-    //Authorize metod
+    //Authorize method
     public void authorize(String username, String password){
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
