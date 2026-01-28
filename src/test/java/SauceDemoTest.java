@@ -41,7 +41,6 @@ public class SauceDemoTest {
         configs = new Configurations();
         config = configs.properties("config.properties");
 
-
         //driver.get("https://www.saucedemo.com");
         driver.get(config.getString("web.url"));
 
@@ -63,11 +62,8 @@ public class SauceDemoTest {
         //Page Object
         //config.getString("username");
         //loginPage.authorize("standard_user","secret_sauce");
-
         loginPage.authorize(config.getString("username"), config.getString("password"));
-
         //Expected Result  - compare
-        // driver.getCurrentUrl();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
 
         System.out.println("User logged in successfully");
