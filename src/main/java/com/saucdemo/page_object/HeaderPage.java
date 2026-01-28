@@ -27,6 +27,7 @@ public class HeaderPage {
     public WebElement getShoppingCarBadge() {
         return shoppingCartBadge;
     }
+
 }
 
 

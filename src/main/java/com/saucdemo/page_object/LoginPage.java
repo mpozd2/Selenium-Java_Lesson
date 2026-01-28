@@ -31,7 +31,7 @@ public class LoginPage {
     @FindBy(xpath = "//input[@data-test=\"login-button\"]")
     public WebElement loginButton;
 
-    //Authorize metod
+    //Authorize method
     public void authorize(String username, String password){
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
