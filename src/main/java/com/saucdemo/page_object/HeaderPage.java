@@ -24,7 +24,7 @@ public class HeaderPage {
         return shoppingCartLink;
     }
 
-    public WebElement getShoppingCarBadge() {
+     public WebElement getShoppingCarBadge() {
         return shoppingCartBadge;
     }
 
